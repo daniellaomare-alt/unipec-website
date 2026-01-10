@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>send a message </title>
+    
+    <style>
+        <style>
+        body {
+            front - family: Arial, sans - serif
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1)
+        }
+        lebel {
+            display: block;
+            margin-top: 15px
+            front-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px
+            border: 1px solid #ccc;
+        }
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            boder: none;
+            boder-radius: 5px;
+            background-color: #25D366; /* Whatsapp green
+            */
+        color: white 
+        front-size 16px;
+            cursor:pointer;
+        }
+        button:hover {
+            background-color: #128C7E;
+        }
+        </style>
+</head>
+<body>
+    <h2>Send message </h2>
+    <form id="msgForm">
+        <lebel>Your Name </lebel>
+        <input type="text" id="name" placeholder="Enter your name" required>
+        <label>Your Message </label>
+        <textarea id="message" placeholder= Type your message here"required></textarea>
+        <lebel>picture name (optional):</lebel>
+        <input type="text" id="picture"
+            placeholder="Enter picture file name">
+        <button type="button"
+            on click="sendWhatsaApp()" Send Via Whatsapp</button>
+    </form>
+    <script>
+        function sendWhatsApp() {
+            let name =
+                document.getElementById('name'). value;
+            let name =
+                document.getElementById'message').value;
+                let picture =
+                document.getElementById('picture').value;
+            let fullMessage = 'Name: ${name}%OAMessage: $ 
+            {message}`;
+            if(picture) {
+            fullmessage += `%OAPicture: ${picture} `;
+                }
+                let Whatsapp =
+                `http://wa.me/2348167688630?text=${fullmessage}`;
+            window.open(Whatsapplink, `_blank');
+        }
+        
+    </script>
+</body>
+</html>
+</body>
